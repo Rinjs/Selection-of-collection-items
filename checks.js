@@ -50,7 +50,7 @@ var friends = [
     }
 ];
 
-// Выполняем выборку и фильтрацию с помощью нашего конструктора
+// Выполняем фильтрацию с помощью нашего конструктора
 var result = lib.query(
     friends,
     lib.filterIn('favoriteFruit', ['Картофель','Апельсин']),
@@ -78,6 +78,7 @@ assert.deepEqual(result, [
         favoriteFruit: 'Картофель'
     }
 ]);
+// Выполняем фильтрацию по двум свойствам с помощью нашего конструктора
 result = lib.query(
     friends,
     lib.filterIn('favoriteFruit', ['Картофель','Апельсин']),
@@ -105,7 +106,7 @@ assert.deepEqual(result, [
         favoriteFruit: 'Картофель'
     }
 ]);
-
+// передаем только обьект
 result = lib.query(
     friends
 );
@@ -155,7 +156,7 @@ assert.deepEqual(result, [
         favoriteFruit: 'Картофель'
     }
 ]);
-
+// Выполняем выборку и фильтрацию с помощью нашего конструктора
 result = lib.query(
     friends,
     lib.select('name','gn','email'),
